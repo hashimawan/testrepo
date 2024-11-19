@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Test</title>
+
+    <script type="text/javascript">
+    (function(w,s){
+        var e=document.createElement("script");
+        e.type="text/javascript";
+        e.async=true;
+        e.src="https://cdn.pagesense.io/js/9yz28pcl/0ae3f0d9b94645198363a5ea353cdb2a.js";
+        var x=document.getElementsByTagName("script")[0];
+        x.parentNode.insertBefore(e,x);
+    })(window,"script");
+    </script>
+
+</head>
+<body>
+    <button id="buttonA">Button A</button>
+    <button id="buttonB">Button B</button>
+
+    <script>
+        document.getElementById('buttonA').addEventListener('click', function() {
+            if (typeof zps !== 'undefined' && zps) {
+                zps.track('Button_Clicked', {
+                    'button': 'A',
+                    'page': window.location.pathname
+                });
+            }
+        });
+
+        document.getElementById('buttonB').addEventListener('click', function() {
+            if (typeof zps !== 'undefined' && zps) {
+                zps.track('Button_Clicked', {
+                    'button': 'B',
+                    'page': window.location.pathname
+                });
+            }
+        });
+    </script>
+</body>
+</html>
